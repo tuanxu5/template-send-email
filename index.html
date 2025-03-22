@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Facebook Marketing Partners</title>
+    <style>
+      /* Reset styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      }
+
+      body {
+        background-color: #ffffff;
+        color: #1c1e21;
+        line-height: 1.5;
+        font-size: 16px;
+      }
+
+      /* Header styles */
+      header {
+        background-color: #ffffff;
+        padding: 20px 0;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 22px;
+        font-weight: bold;
+        color: #1877f2;
+      }
+
+      .nav-menu {
+        display: flex;
+      }
+
+      .nav-menu ul {
+        display: flex;
+        list-style: none;
+      }
+
+      .nav-menu ul li {
+        margin-left: 20px;
+      }
+
+      .nav-menu ul li a {
+        text-decoration: none;
+        color: #1c1e21;
+        font-weight: 500;
+        font-size: 14px;
+        transition: color 0.3s;
+      }
+
+      .nav-menu ul li a:hover {
+        color: #1877f2;
+      }
+
+      /* Hero section styles */
+      .hero {
+        background-color: #f0f2f5;
+        padding: 80px 0;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 40px;
+        color: #1c1e21;
+        margin-bottom: 20px;
+        font-weight: 700;
+      }
+
+      .hero p {
+        font-size: 20px;
+        color: #65676b;
+        max-width: 800px;
+        margin: 0 auto 30px;
+        line-height: 1.6;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 12px 24px;
+        background-color: #1877f2;
+        color: #ffffff;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: 600;
+        font-size: 16px;
+        transition: background-color 0.3s;
+      }
+
+      .btn:hover {
+        background-color: #166fe5;
+      }
+
+      .btn-secondary {
+        background-color: #f0f2f5;
+        color: #1877f2;
+        border: 1px solid #1877f2;
+        margin-left: 15px;
+      }
+
+      .btn-secondary:hover {
+        background-color: #e4e6eb;
+      }
+
+      /* Partners section styles */
+      .partners {
+        padding: 80px 0;
+        background-color: #ffffff;
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 60px;
+      }
+
+      .section-title h2 {
+        font-size: 32px;
+        color: #1c1e21;
+        margin-bottom: 15px;
+        font-weight: 700;
+      }
+
+      .section-title p {
+        color: #65676b;
+        max-width: 700px;
+        margin: 0 auto;
+        font-size: 18px;
+      }
+
+      .partners-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+      }
+
+      .partner-card {
+        width: 340px;
+        padding: 30px;
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .partner-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      }
+
+      .partner-card img {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 20px;
+      }
+
+      .partner-card h3 {
+        font-size: 20px;
+        color: #1c1e21;
+        margin-bottom: 15px;
+        font-weight: 600;
+      }
+
+      .partner-card p {
+        color: #65676b;
+        margin-bottom: 20px;
+        line-height: 1.6;
+      }
+
+      /* Benefits section */
+      .benefits {
+        padding: 80px 0;
+        background-color: #f0f2f5;
+      }
+
+      .benefits-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+
+      .benefits-text {
+        width: 48%;
+      }
+
+      .benefits-text h2 {
+        font-size: 32px;
+        color: #1c1e21;
+        margin-bottom: 20px;
+        font-weight: 700;
+      }
+
+      .benefits-text p {
+        color: #65676b;
+        margin-bottom: 25px;
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+      .benefits-list {
+        list-style: none;
+        margin-top: 30px;
+      }
+
+      .benefits-list li {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 20px;
+      }
+
+      .benefits-list li .icon {
+        width: 24px;
+        height: 24px;
+        background-color: #1877f2;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+        flex-shrink: 0;
+      }
+
+      .benefits-list li .icon:before {
+        content: "✓";
+        color: white;
+        font-size: 14px;
+      }
+
+      .benefits-list li p {
+        margin-bottom: 0;
+      }
+
+      .benefits-image {
+        width: 48%;
+      }
+
+      .benefits-image img {
+        width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Success stories section */
+      .success-stories {
+        padding: 80px 0;
+        background-color: #ffffff;
+      }
+
+      .stories-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 50px;
+      }
+
+      .story-card {
+        width: 340px;
+        padding: 30px;
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .story-content {
+        margin-bottom: 20px;
+      }
+
+      .story-content p {
+        color: #65676b;
+        font-size: 16px;
+        line-height: 1.6;
+      }
+
+      .story-stats {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      .stat {
+        margin-right: 30px;
+      }
+
+      .stat h4 {
+        font-size: 24px;
+        color: #1877f2;
+        font-weight: 700;
+        margin-bottom: 5px;
+      }
+
+      .stat p {
+        color: #65676b;
+        font-size: 14px;
+      }
+
+      .story-author {
+        display: flex;
+        align-items: center;
+      }
+
+      .story-author img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 15px;
+      }
+
+      .author-info h4 {
+        font-size: 16px;
+        color: #1c1e21;
+        margin-bottom: 5px;
+        font-weight: 600;
+      }
+
+      .author-info p {
+        color: #65676b;
+        font-size: 14px;
+      }
+
+      /* How it works section */
+      .how-it-works {
+        padding: 80px 0;
+        background-color: #f0f2f5;
+      }
+
+      .steps-container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .step-card {
+        width: 30%;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .step-number {
+        width: 50px;
+        height: 50px;
+        background-color: #1877f2;
+        color: #ffffff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        font-weight: 700;
+        margin: 0 auto 20px;
+      }
+
+      .step-card h3 {
+        font-size: 20px;
+        color: #1c1e21;
+        margin-bottom: 15px;
+        font-weight: 600;
+      }
+
+      .step-card p {
+        color: #65676b;
+        font-size: 16px;
+        line-height: 1.6;
+      }
+
+      /* CTA section */
+      .cta {
+        padding: 80px 0;
+        background-color: #ffffff;
+        text-align: center;
+      }
+
+      .cta h2 {
+        font-size: 32px;
+        color: #1c1e21;
+        margin-bottom: 20px;
+        font-weight: 700;
+      }
+
+      .cta p {
+        color: #65676b;
+        max-width: 700px;
+        margin: 0 auto 30px;
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+      /* Footer */
+      footer {
+        background-color: #f0f2f5;
+        padding: 60px 0 30px;
+      }
+
+      .footer-content {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      .footer-column {
+        width: 23%;
+        margin-bottom: 30px;
+      }
+
+      .footer-column h3 {
+        font-size: 16px;
+        color: #1c1e21;
+        margin-bottom: 20px;
+        font-weight: 600;
+      }
+
+      .footer-column ul {
+        list-style: none;
+      }
+
+      .footer-column ul li {
+        margin-bottom: 10px;
+      }
+
+      .footer-column ul li a {
+        color: #65676b;
+        text-decoration: none;
+        font-size: 14px;
+        transition: color 0.3s;
+      }
+
+      .footer-column ul li a:hover {
+        color: #1877f2;
+      }
+
+      .footer-bottom {
+        margin-top: 40px;
+        text-align: center;
+        padding-top: 20px;
+        border-top: 1px solid #dadde1;
+      }
+
+      .footer-bottom p {
+        color: #65676b;
+        font-size: 12px;
+      }
+
+      .social-icons {
+        display: flex;
+        margin-top: 20px;
+      }
+
+      .social-icons a {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background-color: #e4e6eb;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+        transition: background-color 0.3s;
+      }
+
+      .social-icons a:hover {
+        background-color: #dadde1;
+      }
+
+      .language-selector {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+      }
+
+      .language-selector select {
+        padding: 8px 12px;
+        border-radius: 4px;
+        border: 1px solid #dadde1;
+        background-color: #ffffff;
+        color: #1c1e21;
+        font-size: 14px;
+        margin-left: 10px;
+      }
+
+      /* Responsive styles */
+      @media screen and (max-width: 992px) {
+        .benefits-container {
+          flex-direction: column;
+        }
+
+        .benefits-text,
+        .benefits-image {
+          width: 100%;
+          margin-bottom: 40px;
+        }
+
+        .steps-container {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .step-card {
+          width: 100%;
+          max-width: 400px;
+          margin-bottom: 40px;
+        }
+
+        .footer-column {
+          width: 48%;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        .header-content {
+          flex-direction: column;
+        }
+
+        .nav-menu {
+          margin-top: 20px;
+        }
+
+        .nav-menu ul {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        .nav-menu ul li {
+          margin: 0 10px;
+          margin-bottom: 10px;
+        }
+
+        .hero h1 {
+          font-size: 32px;
+        }
+
+        .hero p {
+          font-size: 18px;
+        }
+
+        .btn {
+          display: block;
+          margin: 0 auto 15px;
+          max-width: 250px;
+        }
+
+        .btn-secondary {
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .footer-column {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <div class="header-content">
+          <div class="logo">Facebook Marketing Partners</div>
+          <div class="nav-menu">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Find Partners</a></li>
+              <li><a href="#">Partner Categories</a></li>
+              <li><a href="#">Success Stories</a></li>
+              <li><a href="#">Resources</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero section -->
+    <section class="hero">
+      <div class="container">
+        <h1>Connect with proven marketing partners</h1>
+        <p>
+          Find Facebook Marketing Partners with expertise across ad technology, community management, creative
+          platforms, small business solutions, and more.
+        </p>
+        <a href="#" class="btn">Find a Partner</a>
+        <a href="#" class="btn btn-secondary">Become a Partner</a>
+      </div>
+    </section>
+
+    <!-- Partners section -->
+    <section class="partners">
+      <div class="container">
+        <div class="section-title">
+          <h2>Our Marketing Partners</h2>
+          <p>Discover specialized partners that can help you achieve your marketing goals.</p>
+        </div>
+        <div class="partners-grid">
+          <div class="partner-card">
+            <img src="https://via.placeholder.com/60" alt="Ad Technology" />
+            <h3>Ad Technology</h3>
+            <p>Partners who help businesses build, manage, and optimize digital advertising campaigns.</p>
+            <a href="#" class="btn">Learn More</a>
+          </div>
+          <div class="partner-card">
+            <img src="https://via.placeholder.com/60" alt="Community Management" />
+            <h3>Community Management</h3>
+            <p>Partners who specialize in managing and growing communities across Facebook family of apps.</p>
+            <a href="#" class="btn">Learn More</a>
+          </div>
+          <div class="partner-card">
+            <img src="https://via.placeholder.com/60" alt="Creative Platforms" />
+            <h3>Creative Platforms</h3>
+            <p>Partners who provide tools and services to create effective ads that resonate with audiences.</p>
+            <a href="#" class="btn">Learn More</a>
+          </div>
+          <div class="partner-card">
+            <img src="https://via.placeholder.com/60" alt="Measurement" />
+            <h3>Measurement</h3>
+            <p>Partners who help businesses measure the effectiveness of their Facebook marketing campaigns.</p>
+            <a href="#" class="btn">Learn More</a>
+          </div>
+          <div class="partner-card">
+            <img src="https://via.placeholder.com/60" alt="Small Business Solutions" />
+            <h3>Small Business Solutions</h3>
+            <p>Partners who provide specialized solutions for small businesses to grow their online presence.</p>
+            <a href="#" class="btn">Learn More</a>
+          </div>
+          <div class="partner-card">
+            <img src="https://via.placeholder.com/60" alt="Commerce" />
+            <h3>Commerce</h3>
+            <p>Partners who help businesses implement and optimize e-commerce solutions on Facebook platforms.</p>
+            <a href="#" class="btn">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits section -->
+    <section class="benefits">
+      <div class="container">
+        <div class="benefits-container">
+          <div class="benefits-text">
+            <h2>Why work with Marketing Partners?</h2>
+            <p>
+              Facebook Marketing Partners are vetted for their expertise and proven success. Working with our partners
+              can help your business achieve better results and grow faster.
+            </p>
+            <ul class="benefits-list">
+              <li>
+                <div class="icon"></div>
+                <p>Access to specialized expertise and proven solutions</p>
+              </li>
+              <li>
+                <div class="icon"></div>
+                <p>Partners are trained on Facebook's latest products and best practices</p>
+              </li>
+              <li>
+                <div class="icon"></div>
+                <p>Save time and resources with trusted marketing professionals</p>
+              </li>
+              <li>
+                <div class="icon"></div>
+                <p>Scale your business with advanced tools and strategies</p>
+              </li>
+            </ul>
+            <a href="#" class="btn">Learn More About Benefits</a>
+          </div>
+          <div class="benefits-image">
+            <img src="https://via.placeholder.com/500x400" alt="Benefits" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Success stories section -->
+    <section class="success-stories">
+      <div class="container">
+        <div class="section-title">
+          <h2>Success Stories</h2>
+          <p>See how businesses have achieved exceptional results with our Marketing Partners.</p>
+        </div>
+        <div class="stories-container">
+          <div class="story-card">
+            <div class="story-content">
+              <p>
+                "Working with Facebook Marketing Partners helped us optimize our campaign performance and significantly
+                increase our return on ad spend."
+              </p>
+            </div>
+            <div class="story-stats">
+              <div class="stat">
+                <h4>3.2x</h4>
+                <p>ROAS increase</p>
+              </div>
+              <div class="stat">
+                <h4>45%</h4>
+                <p>More conversions</p>
+              </div>
+            </div>
+            <div class="story-author">
+              <img src="https://via.placeholder.com/50" alt="John Smith" />
+              <div class="author-info">
+                <h4>John Smith</h4>
+                <p>Marketing Director, Global Retail</p>
+              </div>
+            </div>
+          </div>
+          <div class="story-card">
+            <div class="story-content">
+              <p>
+                "Our Facebook Marketing Partner helped us scale our e-commerce business with innovative solutions and
+                expert guidance."
+              </p>
+            </div>
+            <div class="story-stats">
+              <div class="stat">
+                <h4>2.7x</h4>
+                <p>Revenue growth</p>
+              </div>
+              <div class="stat">
+                <h4>62%</h4>
+                <p>New customers</p>
+              </div>
+            </div>
+            <div class="story-author">
+              <img src="https://via.placeholder.com/50" alt="Maria Rodriguez" />
+              <div class="author-info">
+                <h4>Maria Rodriguez</h4>
+                <p>CEO, Fashion Brand</p>
+              </div>
+            </div>
+          </div>
+          <div class="story-card">
+            <div class="story-content">
+              <p>
+                "The creative solutions provided by our Facebook Marketing Partner transformed our brand messaging and
+                audience engagement."
+              </p>
+            </div>
+            <div class="story-stats">
+              <div class="stat">
+                <h4>187%</h4>
+                <p>Engagement increase</p>
+              </div>
+              <div class="stat">
+                <h4>4.5x</h4>
+                <p>Brand reach</p>
+              </div>
+            </div>
+            <div class="story-author">
+              <img src="https://via.placeholder.com/50" alt="David Chen" />
+              <div class="author-info">
+                <h4>David Chen</h4>
+                <p>Brand Manager, Tech Company</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works section -->
+    <section class="how-it-works">
+      <div class="container">
+        <div class="section-title">
+          <h2>How It Works</h2>
+          <p>Finding and working with Facebook Marketing Partners is simple.</p>
+        </div>
+        <div class="steps-container">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <h3>Find a Partner</h3>
+            <p>Search for Marketing Partners based on your business needs, industry, location, and more.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <h3>Connect & Collaborate</h3>
+            <p>Reach out to potential partners to discuss your goals and requirements.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <h3>Grow Your Business</h3>
+            <p>Work together to implement solutions and achieve your marketing objectives.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA section -->
+    <section class="cta">
+      <div class="container">
+        <h2>Ready to take your business to the next level?</h2>
+        <p>
+          Connect with Facebook Marketing Partners today and discover how they can help you achieve your business goals.
+        </p>
+        <a href="#" class="btn">Find a Partner Now</a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3>Facebook Marketing Partners</h3>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Find Partners</a></li>
+              <li><a href="#">Become a Partner</a></li>
+              <li><a href="#">Success Stories</a></li>
+              <li><a href="#">Resources</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Partner Categories</h3>
+            <ul>
+              <li><a href="#">Ad Technology</a></li>
+              <li><a href="#">Community Management</a></li>
+              <li><a href="#">Creative Platforms</a></li>
+              <li><a href="#">Measurement</a></li>
+              <li><a href="#">Small Business Solutions</a></li>
+              <li><a href="#">Commerce</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Support</h3>
+            <ul>
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Partner Support</a></li>
+              <li><a href="#">Business Support</a></li>
+              <li><a href="#">FAQs</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Legal</h3>
+            <ul>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Cookie Policy</a></li>
+              <li><a href="#">Data Policy</a></li>
+              <li><a href="#">Partner Program Terms</a></li>
+            </ul>
+            <div class="language-selector">
+              <span>Language:</span>
+              <select>
+                <option value="en">English</option>
+                <option value="es">Español</option>
+                <option value="fr">Français</option>
+                <option value="de">Deutsch</option>
+                <option value="it">Italiano</option>
+                <option value="pt">Português</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2025 Meta. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
