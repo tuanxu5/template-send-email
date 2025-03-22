@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Business Digital Partners</title>
+    <style>
+      /* Reset styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        background-color: #ffffff;
+        color: #333;
+        line-height: a.5;
+      }
+
+      /* Header styles */
+      header {
+        background-color: #ffffff;
+        padding: 20px 0;
+        border-bottom: 1px solid #f0f0f0;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: #2c3e50;
+      }
+
+      .logo span {
+        color: #3498db;
+      }
+
+      /* Hero section styles */
+      .hero {
+        background-color: #f8f9fa;
+        padding: 60px 0;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+        color: #2c3e50;
+        margin-bottom: 20px;
+      }
+
+      .hero p {
+        font-size: 18px;
+        color: #7f8c8d;
+        max-width: 800px;
+        margin: 0 auto 30px;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 12px 30px;
+        background-color: #3498db;
+        color: #ffffff;
+        text-decoration: none;
+        border-radius: 4px;
+        font-weight: bold;
+        transition: background-color 0.3s;
+      }
+
+      .btn:hover {
+        background-color: #2980b9;
+      }
+
+      /* Services section styles */
+      .services {
+        padding: 60px 0;
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+
+      .section-title h2 {
+        font-size: 30px;
+        color: #2c3e50;
+        margin-bottom: 15px;
+      }
+
+      .section-title p {
+        color: #7f8c8d;
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      .services-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 40px;
+      }
+
+      .service-card {
+        width: 32%;
+        margin-bottom: 30px;
+        padding: 30px;
+        background-color: #ffffff;
+        border-radius: 6px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        text-align: center;
+      }
+
+      .service-card img {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 20px;
+      }
+
+      .service-card h3 {
+        font-size: 20px;
+        color: #2c3e50;
+        margin-bottom: 15px;
+      }
+
+      .service-card p {
+        color: #7f8c8d;
+        margin-bottom: 20px;
+      }
+
+      /* About section styles */
+      .about {
+        padding: 60px 0;
+        background-color: #f8f9fa;
+      }
+
+      .about-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .about-text {
+        width: 48%;
+      }
+
+      .about-text h2 {
+        font-size: 30px;
+        color: #2c3e50;
+        margin-bottom: 20px;
+      }
+
+      .about-text p {
+        color: #7f8c8d;
+        margin-bottom: 25px;
+      }
+
+      .about-image {
+        width: 48%;
+      }
+
+      .about-image img {
+        width: 100%;
+        border-radius: 6px;
+      }
+
+      /* Testimonials section styles */
+      .testimonials {
+        padding: 60px 0;
+      }
+
+      .testimonial-card {
+        padding: 30px;
+        background-color: #ffffff;
+        border-radius: 6px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        margin-bottom: 30px;
+      }
+
+      .testimonial-content {
+        font-style: italic;
+        color: #7f8c8d;
+        margin-bottom: 20px;
+      }
+
+      .testimonial-author {
+        display: flex;
+        align-items: center;
+      }
+
+      .testimonial-author img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 15px;
+      }
+
+      .author-info h4 {
+        font-size: 18px;
+        color: #2c3e50;
+        margin-bottom: 5px;
+      }
+
+      .author-info p {
+        color: #7f8c8d;
+        font-size: 14px;
+      }
+
+      /* Contact section styles */
+      .contact {
+        padding: 60px 0;
+        background-color: #f8f9fa;
+      }
+
+      .contact-info {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 40px;
+      }
+
+      .contact-card {
+        width: 32%;
+        padding: 30px;
+        background-color: #ffffff;
+        border-radius: 6px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        text-align: center;
+      }
+
+      .contact-card h3 {
+        font-size: 20px;
+        color: #2c3e50;
+        margin-bottom: 15px;
+      }
+
+      .contact-card p {
+        color: #7f8c8d;
+      }
+
+      /* Footer styles */
+      footer {
+        background-color: #2c3e50;
+        color: #ffffff;
+        padding: 40px 0;
+      }
+
+      .footer-content {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .footer-column {
+        width: 24%;
+      }
+
+      .footer-column h3 {
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+
+      .footer-column p {
+        color: #bdc3c7;
+        margin-bottom: 10px;
+      }
+
+      .footer-column ul {
+        list-style: none;
+      }
+
+      .footer-column ul li {
+        margin-bottom: 10px;
+      }
+
+      .footer-column ul li a {
+        color: #bdc3c7;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+
+      .footer-column ul li a:hover {
+        color: #3498db;
+      }
+
+      .footer-bottom {
+        margin-top: 40px;
+        text-align: center;
+        padding-top: 20px;
+        border-top: 1px solid #34495e;
+      }
+
+      .footer-bottom p {
+        color: #bdc3c7;
+      }
+
+      /* Responsive styles for email clients */
+      @media screen and (max-width: 768px) {
+        .header-content {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .services-grid {
+          flex-direction: column;
+        }
+
+        .service-card {
+          width: 100%;
+        }
+
+        .about-content {
+          flex-direction: column;
+        }
+
+        .about-text,
+        .about-image {
+          width: 100%;
+          margin-bottom: 30px;
+        }
+
+        .contact-info {
+          flex-direction: column;
+        }
+
+        .contact-card {
+          width: 100%;
+          margin-bottom: 20px;
+        }
+
+        .footer-content {
+          flex-direction: column;
+        }
+
+        .footer-column {
+          width: 100%;
+          margin-bottom: 30px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <div class="header-content">
+          <div class="logo">Business<span>Digital</span>Partners</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero section -->
+    <section class="hero">
+      <div class="container">
+        <h1>Your Trusted Digital Partner</h1>
+        <p>
+          We help businesses transform their digital presence with innovative solutions and strategies designed for
+          growth and success.
+        </p>
+        <a href="#contact" class="btn">Get Started Today</a>
+      </div>
+    </section>
+
+    <!-- Services section -->
+    <section class="services">
+      <div class="container">
+        <div class="section-title">
+          <h2>Our Services</h2>
+          <p>We offer a wide range of digital services to help your business thrive in the digital landscape.</p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card">
+            <img src="https://via.placeholder.com/60" alt="Digital Marketing" />
+            <h3>Digital Marketing</h3>
+            <p>Strategic marketing solutions tailored to reach your target audience and drive conversions.</p>
+            <a href="#" class="btn">Learn More</a>
+          </div>
+          <div class="service-card">
+            <img src="https://via.placeholder.com/60" alt="Web Development" />
+            <h3>Web Development</h3>
+            <p>Custom website development that focuses on user experience, performance, and results.</p>
+            <a href="#" class="btn">Learn More</a>
+          </div>
+          <div class="service-card">
+            <img src="https://via.placeholder.com/60" alt="E-Commerce Solutions" />
+            <h3>E-Commerce Solutions</h3>
+            <p>Complete online store setup and optimization to maximize your sales and customer satisfaction.</p>
+            <a href="#" class="btn">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About section -->
+    <section class="about">
+      <div class="container">
+        <div class="about-content">
+          <div class="about-text">
+            <h2>About Business Digital Partners</h2>
+            <p>
+              At Business Digital Partners, we believe in the power of digital transformation to revolutionize
+              businesses. With over a decade of experience, our team of experts works tirelessly to deliver exceptional
+              results for our clients.
+            </p>
+            <p>
+              Our approach is client-centered, focusing on understanding your unique challenges and goals to create
+              tailored solutions that drive real business growth.
+            </p>
+            <a href="#" class="btn">Read Our Story</a>
+          </div>
+          <div class="about-image">
+            <img src="https://via.placeholder.com/500x300" alt="About Us" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials section -->
+    <section class="testimonials">
+      <div class="container">
+        <div class="section-title">
+          <h2>Client Testimonials</h2>
+          <p>See what our clients have to say about working with Business Digital Partners.</p>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <p>
+              "Business Digital Partners transformed our online presence completely. Their strategic approach and
+              attention to detail resulted in a 200% increase in our digital leads within just three months."
+            </p>
+          </div>
+          <div class="testimonial-author">
+            <img src="https://via.placeholder.com/50" alt="Sarah Johnson" />
+            <div class="author-info">
+              <h4>Sarah Johnson</h4>
+              <p>CEO, TechInnovate</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact section -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="section-title">
+          <h2>Contact Us</h2>
+          <p>Ready to start your digital transformation journey? Get in touch with our team today.</p>
+        </div>
+        <div class="contact-info">
+          <div class="contact-card">
+            <h3>Email Us</h3>
+            <p>info@businessdigital-partners.com</p>
+          </div>
+          <div class="contact-card">
+            <h3>Call Us</h3>
+            <p>+1 (123) 456-7890</p>
+          </div>
+          <div class="contact-card">
+            <h3>Visit Us</h3>
+            <p>123 Business Avenue, Digital City, CA 90210</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3>Business Digital Partners</h3>
+            <p>Your trusted partner for digital transformation and business growth in the digital age.</p>
+          </div>
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Our Services</h3>
+            <ul>
+              <li><a href="#">Digital Marketing</a></li>
+              <li><a href="#">Web Development</a></li>
+              <li><a href="#">E-Commerce Solutions</a></li>
+              <li><a href="#">Business Consulting</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Stay Connected</h3>
+            <p>Subscribe to our newsletter for updates.</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Business Digital Partners. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
