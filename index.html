@@ -4,591 +4,113 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Facebook Marketing Partners</title>
-    <style>
-      /* Reset styles */
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      }
-
-      body {
-        background-color: #ffffff;
-        color: #1c1e21;
-        line-height: 1.5;
-        font-size: 16px;
-      }
-
-      /* Header styles */
-      header {
+  </head>
+  <body
+    style="
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background-color: #ffffff;
+      color: #1c1e21;
+      line-height: 1.5;
+      font-size: 16px;
+    "
+  >
+    <!-- Header -->
+    <header
+      style="
         background-color: #ffffff;
         padding: 20px 0;
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
         position: sticky;
         top: 0;
         z-index: 100;
-      }
-
-      .container {
-        width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-      }
-
-      .header-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-
-      .logo {
-        font-size: 22px;
-        font-weight: bold;
-        color: #1877f2;
-      }
-
-      .nav-menu {
-        display: flex;
-      }
-
-      .nav-menu ul {
-        display: flex;
-        list-style: none;
-      }
-
-      .nav-menu ul li {
-        margin-left: 20px;
-      }
-
-      .nav-menu ul li a {
-        text-decoration: none;
-        color: #1c1e21;
-        font-weight: 500;
-        font-size: 14px;
-        transition: color 0.3s;
-      }
-
-      .nav-menu ul li a:hover {
-        color: #1877f2;
-      }
-
-      /* Hero section styles */
-      .hero {
-        background-color: #f0f2f5;
-        padding: 80px 0;
-        text-align: center;
-      }
-
-      .hero h1 {
-        font-size: 40px;
-        color: #1c1e21;
-        margin-bottom: 20px;
-        font-weight: 700;
-      }
-
-      .hero p {
-        font-size: 20px;
-        color: #65676b;
-        max-width: 800px;
-        margin: 0 auto 30px;
-        line-height: 1.6;
-      }
-
-      .btn {
-        display: inline-block;
-        padding: 12px 24px;
-        background-color: #1877f2;
-        color: #ffffff;
-        text-decoration: none;
-        border-radius: 6px;
-        font-weight: 600;
-        font-size: 16px;
-        transition: background-color 0.3s;
-      }
-
-      .btn:hover {
-        background-color: #166fe5;
-      }
-
-      .btn-secondary {
-        background-color: #f0f2f5;
-        color: #1877f2;
-        border: 1px solid #1877f2;
-        margin-left: 15px;
-      }
-
-      .btn-secondary:hover {
-        background-color: #e4e6eb;
-      }
-
-      /* Partners section styles */
-      .partners {
-        padding: 80px 0;
-        background-color: #ffffff;
-      }
-
-      .section-title {
-        text-align: center;
-        margin-bottom: 60px;
-      }
-
-      .section-title h2 {
-        font-size: 32px;
-        color: #1c1e21;
-        margin-bottom: 15px;
-        font-weight: 700;
-      }
-
-      .section-title p {
-        color: #65676b;
-        max-width: 700px;
-        margin: 0 auto;
-        font-size: 18px;
-      }
-
-      .partners-grid {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 30px;
-      }
-
-      .partner-card {
-        width: 340px;
-        padding: 30px;
-        background-color: #ffffff;
-        border-radius: 8px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s, box-shadow 0.3s;
-      }
-
-      .partner-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-      }
-
-      .partner-card img {
-        width: 60px;
-        height: 60px;
-        margin-bottom: 20px;
-      }
-
-      .partner-card h3 {
-        font-size: 20px;
-        color: #1c1e21;
-        margin-bottom: 15px;
-        font-weight: 600;
-      }
-
-      .partner-card p {
-        color: #65676b;
-        margin-bottom: 20px;
-        line-height: 1.6;
-      }
-
-      /* Benefits section */
-      .benefits {
-        padding: 80px 0;
-        background-color: #f0f2f5;
-      }
-
-      .benefits-container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        max-width: 1100px;
-        margin: 0 auto;
-      }
-
-      .benefits-text {
-        width: 48%;
-      }
-
-      .benefits-text h2 {
-        font-size: 32px;
-        color: #1c1e21;
-        margin-bottom: 20px;
-        font-weight: 700;
-      }
-
-      .benefits-text p {
-        color: #65676b;
-        margin-bottom: 25px;
-        font-size: 18px;
-        line-height: 1.6;
-      }
-
-      .benefits-list {
-        list-style: none;
-        margin-top: 30px;
-      }
-
-      .benefits-list li {
-        display: flex;
-        align-items: flex-start;
-        margin-bottom: 20px;
-      }
-
-      .benefits-list li .icon {
-        width: 24px;
-        height: 24px;
-        background-color: #1877f2;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-right: 15px;
-        flex-shrink: 0;
-      }
-
-      .benefits-list li .icon:before {
-        content: "✓";
-        color: white;
-        font-size: 14px;
-      }
-
-      .benefits-list li p {
-        margin-bottom: 0;
-      }
-
-      .benefits-image {
-        width: 48%;
-      }
-
-      .benefits-image img {
-        width: 100%;
-        border-radius: 8px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-      }
-
-      /* Success stories section */
-      .success-stories {
-        padding: 80px 0;
-        background-color: #ffffff;
-      }
-
-      .stories-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 30px;
-        margin-top: 50px;
-      }
-
-      .story-card {
-        width: 340px;
-        padding: 30px;
-        background-color: #ffffff;
-        border-radius: 8px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      }
-
-      .story-content {
-        margin-bottom: 20px;
-      }
-
-      .story-content p {
-        color: #65676b;
-        font-size: 16px;
-        line-height: 1.6;
-      }
-
-      .story-stats {
-        display: flex;
-        align-items: center;
-        margin-bottom: 20px;
-      }
-
-      .stat {
-        margin-right: 30px;
-      }
-
-      .stat h4 {
-        font-size: 24px;
-        color: #1877f2;
-        font-weight: 700;
-        margin-bottom: 5px;
-      }
-
-      .stat p {
-        color: #65676b;
-        font-size: 14px;
-      }
-
-      .story-author {
-        display: flex;
-        align-items: center;
-      }
-
-      .story-author img {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        margin-right: 15px;
-      }
-
-      .author-info h4 {
-        font-size: 16px;
-        color: #1c1e21;
-        margin-bottom: 5px;
-        font-weight: 600;
-      }
-
-      .author-info p {
-        color: #65676b;
-        font-size: 14px;
-      }
-
-      /* How it works section */
-      .how-it-works {
-        padding: 80px 0;
-        background-color: #f0f2f5;
-      }
-
-      .steps-container {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 50px;
-        max-width: 1000px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .step-card {
-        width: 30%;
-        text-align: center;
-        padding: 20px;
-      }
-
-      .step-number {
-        width: 50px;
-        height: 50px;
-        background-color: #1877f2;
-        color: #ffffff;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 20px;
-        font-weight: 700;
-        margin: 0 auto 20px;
-      }
-
-      .step-card h3 {
-        font-size: 20px;
-        color: #1c1e21;
-        margin-bottom: 15px;
-        font-weight: 600;
-      }
-
-      .step-card p {
-        color: #65676b;
-        font-size: 16px;
-        line-height: 1.6;
-      }
-
-      /* CTA section */
-      .cta {
-        padding: 80px 0;
-        background-color: #ffffff;
-        text-align: center;
-      }
-
-      .cta h2 {
-        font-size: 32px;
-        color: #1c1e21;
-        margin-bottom: 20px;
-        font-weight: 700;
-      }
-
-      .cta p {
-        color: #65676b;
-        max-width: 700px;
-        margin: 0 auto 30px;
-        font-size: 18px;
-        line-height: 1.6;
-      }
-
-      /* Footer */
-      footer {
-        background-color: #f0f2f5;
-        padding: 60px 0 30px;
-      }
-
-      .footer-content {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-      }
-
-      .footer-column {
-        width: 23%;
-        margin-bottom: 30px;
-      }
-
-      .footer-column h3 {
-        font-size: 16px;
-        color: #1c1e21;
-        margin-bottom: 20px;
-        font-weight: 600;
-      }
-
-      .footer-column ul {
-        list-style: none;
-      }
-
-      .footer-column ul li {
-        margin-bottom: 10px;
-      }
-
-      .footer-column ul li a {
-        color: #65676b;
-        text-decoration: none;
-        font-size: 14px;
-        transition: color 0.3s;
-      }
-
-      .footer-column ul li a:hover {
-        color: #1877f2;
-      }
-
-      .footer-bottom {
-        margin-top: 40px;
-        text-align: center;
-        padding-top: 20px;
-        border-top: 1px solid #dadde1;
-      }
-
-      .footer-bottom p {
-        color: #65676b;
-        font-size: 12px;
-      }
-
-      .social-icons {
-        display: flex;
-        margin-top: 20px;
-      }
-
-      .social-icons a {
-        width: 36px;
-        height: 36px;
-        border-radius: 50%;
-        background-color: #e4e6eb;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-right: 10px;
-        transition: background-color 0.3s;
-      }
-
-      .social-icons a:hover {
-        background-color: #dadde1;
-      }
-
-      .language-selector {
-        margin-top: 20px;
-        display: flex;
-        align-items: center;
-      }
-
-      .language-selector select {
-        padding: 8px 12px;
-        border-radius: 4px;
-        border: 1px solid #dadde1;
-        background-color: #ffffff;
-        color: #1c1e21;
-        font-size: 14px;
-        margin-left: 10px;
-      }
-
-      /* Responsive styles */
-      @media screen and (max-width: 992px) {
-        .benefits-container {
-          flex-direction: column;
-        }
-
-        .benefits-text,
-        .benefits-image {
-          width: 100%;
-          margin-bottom: 40px;
-        }
-
-        .steps-container {
-          flex-direction: column;
-          align-items: center;
-        }
-
-        .step-card {
-          width: 100%;
-          max-width: 400px;
-          margin-bottom: 40px;
-        }
-
-        .footer-column {
-          width: 48%;
-        }
-      }
-
-      @media screen and (max-width: 768px) {
-        .header-content {
-          flex-direction: column;
-        }
-
-        .nav-menu {
-          margin-top: 20px;
-        }
-
-        .nav-menu ul {
-          flex-wrap: wrap;
-          justify-content: center;
-        }
-
-        .nav-menu ul li {
-          margin: 0 10px;
-          margin-bottom: 10px;
-        }
-
-        .hero h1 {
-          font-size: 32px;
-        }
-
-        .hero p {
-          font-size: 18px;
-        }
-
-        .btn {
-          display: block;
-          margin: 0 auto 15px;
-          max-width: 250px;
-        }
-
-        .btn-secondary {
-          margin-left: auto;
-          margin-right: auto;
-        }
-
-        .footer-column {
-          width: 100%;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <!-- Header -->
-    <header>
-      <div class="container">
-        <div class="header-content">
-          <div class="logo">Facebook Marketing Partners</div>
-          <div class="nav-menu">
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Find Partners</a></li>
-              <li><a href="#">Partner Categories</a></li>
-              <li><a href="#">Success Stories</a></li>
-              <li><a href="#">Resources</a></li>
-              <li><a href="#">Contact</a></li>
+      "
+    >
+      <div style="width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px">
+        <div style="display: flex; justify-content: space-between; align-items: center">
+          <div style="font-size: 22px; font-weight: bold; color: #1877f2">Facebook Marketing Partners</div>
+          <div style="display: flex">
+            <ul style="display: flex; list-style: none; margin: 0; padding: 0">
+              <li style="margin-left: 20px">
+                <a
+                  href="#"
+                  style="
+                    text-decoration: none;
+                    color: #1c1e21;
+                    font-weight: 500;
+                    font-size: 14px;
+                    transition: color 0.3s;
+                  "
+                  >Home</a
+                >
+              </li>
+              <li style="margin-left: 20px">
+                <a
+                  href="#"
+                  style="
+                    text-decoration: none;
+                    color: #1c1e21;
+                    font-weight: 500;
+                    font-size: 14px;
+                    transition: color 0.3s;
+                  "
+                  >Find Partners</a
+                >
+              </li>
+              <li style="margin-left: 20px">
+                <a
+                  href="#"
+                  style="
+                    text-decoration: none;
+                    color: #1c1e21;
+                    font-weight: 500;
+                    font-size: 14px;
+                    transition: color 0.3s;
+                  "
+                  >Partner Categories</a
+                >
+              </li>
+              <li style="margin-left: 20px">
+                <a
+                  href="#"
+                  style="
+                    text-decoration: none;
+                    color: #1c1e21;
+                    font-weight: 500;
+                    font-size: 14px;
+                    transition: color 0.3s;
+                  "
+                  >Success Stories</a
+                >
+              </li>
+              <li style="margin-left: 20px">
+                <a
+                  href="#"
+                  style="
+                    text-decoration: none;
+                    color: #1c1e21;
+                    font-weight: 500;
+                    font-size: 14px;
+                    transition: color 0.3s;
+                  "
+                  >Resources</a
+                >
+              </li>
+              <li style="margin-left: 20px">
+                <a
+                  href="#"
+                  style="
+                    text-decoration: none;
+                    color: #1c1e21;
+                    font-weight: 500;
+                    font-size: 14px;
+                    transition: color 0.3s;
+                  "
+                  >Contact</a
+                >
+              </li>
             </ul>
           </div>
         </div>
@@ -596,109 +118,367 @@
     </header>
 
     <!-- Hero section -->
-    <section class="hero">
-      <div class="container">
-        <h1>Connect with proven marketing partners</h1>
-        <p>
+    <section style="background-color: #f0f2f5; padding: 80px 0; text-align: center">
+      <div style="width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px">
+        <h1 style="font-size: 40px; color: #1c1e21; margin-bottom: 20px; font-weight: 700">
+          Connect with proven marketing partners
+        </h1>
+        <p style="font-size: 20px; color: #65676b; max-width: 800px; margin: 0 auto 30px; line-height: 1.6">
           Find Facebook Marketing Partners with expertise across ad technology, community management, creative
           platforms, small business solutions, and more.
         </p>
-        <a href="#" class="btn">Find a Partner</a>
-        <a href="#" class="btn btn-secondary">Become a Partner</a>
+        <a
+          href="#"
+          style="
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #1877f2;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: background-color 0.3s;
+          "
+          >Find a Partner</a
+        >
+        <a
+          href="#"
+          style="
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #f0f2f5;
+            color: #1877f2;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            border: 1px solid #1877f2;
+            margin-left: 15px;
+          "
+          >Become a Partner</a
+        >
       </div>
     </section>
 
     <!-- Partners section -->
-    <section class="partners">
-      <div class="container">
-        <div class="section-title">
-          <h2>Our Marketing Partners</h2>
-          <p>Discover specialized partners that can help you achieve your marketing goals.</p>
+    <section style="padding: 80px 0; background-color: #ffffff">
+      <div style="width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px">
+        <div style="text-align: center; margin-bottom: 60px">
+          <h2 style="font-size: 32px; color: #1c1e21; margin-bottom: 15px; font-weight: 700">Our Marketing Partners</h2>
+          <p style="color: #65676b; max-width: 700px; margin: 0 auto; font-size: 18px">
+            Discover specialized partners that can help you achieve your marketing goals.
+          </p>
         </div>
-        <div class="partners-grid">
-          <div class="partner-card">
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px">
+          <div
+            style="
+              width: 340px;
+              padding: 30px;
+              background-color: #ffffff;
+              border-radius: 8px;
+              box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+              transition: transform 0.3s, box-shadow 0.3s;
+            "
+          >
             <img
               src="https://scontent.fhan5-10.fna.fbcdn.net/v/t39.2365-6/296722631_403135191802358_7141494804316419954_n.png?stp=dst-webp&_nc_cat=101&ccb=1-7&_nc_sid=e280be&_nc_eui2=AeF8jTNWomYBOoUWcaXMi1fQLLtfREfAM6Ysu19ER8AzpkmCkYJDOJdiihRnGkE9S7xn4RSxNUsKA8fabC70qVig&_nc_ohc=KnPTzAeu29EQ7kNvgGi8v48&_nc_oc=AdkXVlyiVp20TCqln5rRhTzlWHXoChhmAWcBqijUelsqF3wyZv7NvewZXaZUhbDK0qk&_nc_zt=14&_nc_ht=scontent.fhan5-10.fna&_nc_gid=dUNffO68KLmdJzqeVq04gg&oh=00_AYFV7s8Odofiybx0rp4ipxr2zH1gMXpuI1oi2cAKaznl_A&oe=67F8EEDA"
               alt="Ad Technology"
+              style="width: 60px; height: 60px; margin-bottom: 20px"
             />
-            <h3>Ad Technology</h3>
-            <p>Partners who help businesses build, manage, and optimize digital advertising campaigns.</p>
-            <a href="#" class="btn">Learn More</a>
+            <h3 style="font-size: 20px; color: #1c1e21; margin-bottom: 15px; font-weight: 600">Ad Technology</h3>
+            <p style="color: #65676b; margin-bottom: 20px; line-height: 1.6">
+              Partners who help businesses build, manage, and optimize digital advertising campaigns.
+            </p>
+            <a
+              href="#"
+              style="
+                display: inline-block;
+                padding: 12px 24px;
+                background-color: #1877f2;
+                color: #ffffff;
+                text-decoration: none;
+                border-radius: 6px;
+                font-weight: 600;
+                font-size: 16px;
+                transition: background-color 0.3s;
+              "
+              >Learn More</a
+            >
           </div>
-          <div class="partner-card">
+          <div
+            style="
+              width: 340px;
+              padding: 30px;
+              background-color: #ffffff;
+              border-radius: 8px;
+              box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+              transition: transform 0.3s, box-shadow 0.3s;
+            "
+          >
             <img
               src="https://scontent.fhan5-2.fna.fbcdn.net/v/t39.2365-6/297341480_3207097669563956_6153616997475552816_n.png?stp=dst-webp&_nc_cat=104&ccb=1-7&_nc_sid=e280be&_nc_eui2=AeGS1V2rmkkAGlRZwKvUpbgFMUyakYc3m2wxTJqRhzebbMDt31nukxSOJkhrjPvUM_GEllHguiGPbqgE9rkr7d7i&_nc_ohc=3c4A-na3c7oQ7kNvgF30AF9&_nc_oc=AdkeXPQy-8qD0d2ep5VqabyERNhJF8Nqv6i-4M1rsc2igSDxhqCzOtznPyPt2SbBzWY&_nc_zt=14&_nc_ht=scontent.fhan5-2.fna&_nc_gid=dUNffO68KLmdJzqeVq04gg&oh=00_AYHvAGfP1FpJCpDXZQlTsEOdqNGP7Ll4WoPDXHeS0zwnxA&oe=67F8F7B0"
               alt="Community Management"
+              style="width: 60px; height: 60px; margin-bottom: 20px"
             />
-            <h3>Community Management</h3>
-            <p>Partners who specialize in managing and growing communities across Facebook family of apps.</p>
-            <a href="#" class="btn">Learn More</a>
+            <h3 style="font-size: 20px; color: #1c1e21; margin-bottom: 15px; font-weight: 600">Community Management</h3>
+            <p style="color: #65676b; margin-bottom: 20px; line-height: 1.6">
+              Partners who specialize in managing and growing communities across Facebook family of apps.
+            </p>
+            <a
+              href="#"
+              style="
+                display: inline-block;
+                padding: 12px 24px;
+                background-color: #1877f2;
+                color: #ffffff;
+                text-decoration: none;
+                border-radius: 6px;
+                font-weight: 600;
+                font-size: 16px;
+                transition: background-color 0.3s;
+              "
+              >Learn More</a
+            >
           </div>
-          <div class="partner-card">
+          <div
+            style="
+              width: 340px;
+              padding: 30px;
+              background-color: #ffffff;
+              border-radius: 8px;
+              box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+              transition: transform 0.3s, box-shadow 0.3s;
+            "
+          >
             <img
               src="https://scontent.fhan5-11.fna.fbcdn.net/v/t39.2365-6/296807348_1173306503517486_6201200321746983985_n.png?stp=dst-webp&_nc_cat=103&ccb=1-7&_nc_sid=e280be&_nc_eui2=AeGbvByeMtYeSrrMSrKBkpRPGjdVeLt4nOMaN1V4u3ic4-sYXvyvFbesarNklSLmdsAEganhd1QSfbznZ_aoERcF&_nc_ohc=HpTbqpKMjpEQ7kNvgH83wv_&_nc_oc=AdlDQodOeULwFxSFZndWVeppS727O51gEdcbzCE_1ccuaAYWdz8_HVc_FoPSxJrPPXw&_nc_zt=14&_nc_ht=scontent.fhan5-11.fna&_nc_gid=dUNffO68KLmdJzqeVq04gg&oh=00_AYGVZL_1FZgjgiz2lrIOBa0zbgCTPmZtUYg-Ep-BcbVg1g&oe=67F8EFFB"
               alt="Creative Platforms"
+              style="width: 60px; height: 60px; margin-bottom: 20px"
             />
-            <h3>Creative Platforms</h3>
-            <p>Partners who provide tools and services to create effective ads that resonate with audiences.</p>
-            <a href="#" class="btn">Learn More</a>
+            <h3 style="font-size: 20px; color: #1c1e21; margin-bottom: 15px; font-weight: 600">Creative Platforms</h3>
+            <p style="color: #65676b; margin-bottom: 20px; line-height: 1.6">
+              Partners who provide tools and services to create effective ads that resonate with audiences.
+            </p>
+            <a
+              href="#"
+              style="
+                display: inline-block;
+                padding: 12px 24px;
+                background-color: #1877f2;
+                color: #ffffff;
+                text-decoration: none;
+                border-radius: 6px;
+                font-weight: 600;
+                font-size: 16px;
+                transition: background-color 0.3s;
+              "
+              >Learn More</a
+            >
           </div>
-          <div class="partner-card">
+          <div
+            style="
+              width: 340px;
+              padding: 30px;
+              background-color: #ffffff;
+              border-radius: 8px;
+              box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+              transition: transform 0.3s, box-shadow 0.3s;
+            "
+          >
             <img
               src="https://scontent.fhan5-9.fna.fbcdn.net/v/t39.2365-6/296784637_801988671145664_4216046080351202371_n.png?stp=dst-webp&_nc_cat=109&ccb=1-7&_nc_sid=e280be&_nc_eui2=AeEFjxJzg2XClTrPDcHQpYb4i9W5bfRLdHKL1blt9Et0cn3eY3BRyZOf3T5QFJRsSzAgYbQDmSC77RASKThGCY4c&_nc_ohc=cqG70ijrQssQ7kNvgGqZ19P&_nc_oc=AdlbtLgLipqXNH-akLxLhkd-D51JuAVCe7PQItT9sudsmL9vBi9K5g7oeJcWd-CdaTo&_nc_zt=14&_nc_ht=scontent.fhan5-9.fna&_nc_gid=dUNffO68KLmdJzqeVq04gg&oh=00_AYFvGn5M93amtmplOiiYwro_QxhoNHeKnFfqJyurOz3uMg&oe=67F90C0B"
               alt="Measurement"
+              style="width: 60px; height: 60px; margin-bottom: 20px"
             />
-            <h3>Measurement</h3>
-            <p>Partners who help businesses measure the effectiveness of their Facebook marketing campaigns.</p>
-            <a href="#" class="btn">Learn More</a>
+            <h3 style="font-size: 20px; color: #1c1e21; margin-bottom: 15px; font-weight: 600">Measurement</h3>
+            <p style="color: #65676b; margin-bottom: 20px; line-height: 1.6">
+              Partners who help businesses measure the effectiveness of their Facebook marketing campaigns.
+            </p>
+            <a
+              href="#"
+              style="
+                display: inline-block;
+                padding: 12px 24px;
+                background-color: #1877f2;
+                color: #ffffff;
+                text-decoration: none;
+                border-radius: 6px;
+                font-weight: 600;
+                font-size: 16px;
+                transition: background-color 0.3s;
+              "
+              >Learn More</a
+            >
           </div>
-          <div class="partner-card">
+          <div
+            style="
+              width: 340px;
+              padding: 30px;
+              background-color: #ffffff;
+              border-radius: 8px;
+              box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+              transition: transform 0.3s, box-shadow 0.3s;
+            "
+          >
             <img
               src="https://scontent.fhan5-10.fna.fbcdn.net/v/t39.2365-6/296926929_1234985087326792_4960704866447478453_n.png?stp=dst-webp&_nc_cat=101&ccb=1-7&_nc_sid=e280be&_nc_eui2=AeHpiNQDRo524ltawbi5gVLVLxJZpeicEBYvElml6JwQFo6si5_a5qkC2E_bL0bqqujTXEeR-YDFy0mxdBLtrA77&_nc_ohc=ybuAzsRL4s4Q7kNvgGr9cb1&_nc_oc=AdlODuodmri6_EG66ik-i8qfvEEK98i8dSQ6HYnddnLNdHzcEnXGgK_v0knM0IExlRg&_nc_zt=14&_nc_ht=scontent.fhan5-10.fna&_nc_gid=dUNffO68KLmdJzqeVq04gg&oh=00_AYHilK_aBZg58ih7JzZ7G2hhPtWz0btSsDIMm-K-FALlBg&oe=67F8F8AB"
               alt="Small Business Solutions"
+              style="width: 60px; height: 60px; margin-bottom: 20px"
             />
-            <h3>Small Business Solutions</h3>
-            <p>Partners who provide specialized solutions for small businesses to grow their online presence.</p>
-            <a href="#" class="btn">Learn More</a>
+            <h3 style="font-size: 20px; color: #1c1e21; margin-bottom: 15px; font-weight: 600">
+              Small Business Solutions
+            </h3>
+            <p style="color: #65676b; margin-bottom: 20px; line-height: 1.6">
+              Partners who provide specialized solutions for small businesses to grow their online presence.
+            </p>
+            <a
+              href="#"
+              style="
+                display: inline-block;
+                padding: 12px 24px;
+                background-color: #1877f2;
+                color: #ffffff;
+                text-decoration: none;
+                border-radius: 6px;
+                font-weight: 600;
+                font-size: 16px;
+                transition: background-color 0.3s;
+              "
+              >Learn More</a
+            >
           </div>
         </div>
       </div>
     </section>
 
     <!-- Benefits section -->
-    <section class="benefits">
-      <div class="container">
-        <div class="benefits-container">
-          <div class="benefits-text">
-            <h2>Why work with Marketing Partners?</h2>
-            <p>
+    <section style="padding: 80px 0; background-color: #f0f2f5">
+      <div style="width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px">
+        <div
+          style="display: flex; align-items: center; justify-content: space-between; max-width: 1100px; margin: 0 auto"
+        >
+          <div style="width: 48%">
+            <h2 style="font-size: 32px; color: #1c1e21; margin-bottom: 20px; font-weight: 700">
+              Why work with Marketing Partners?
+            </h2>
+            <p style="color: #65676b; margin-bottom: 25px; font-size: 18px; line-height: 1.6">
               Facebook Marketing Partners are vetted for their expertise and proven success. Working with our partners
               can help your business achieve better results and grow faster.
             </p>
-            <ul class="benefits-list">
-              <li>
-                <div class="icon"></div>
-                <p>Access to specialized expertise and proven solutions</p>
+            <ul style="list-style: none; margin-top: 30px; padding: 0">
+              <li style="display: flex; align-items: flex-start; margin-bottom: 20px">
+                <div
+                  style="
+                    width: 24px;
+                    height: 24px;
+                    background-color: #1877f2;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-right: 15px;
+                    flex-shrink: 0;
+                    color: white;
+                    font-size: 14px;
+                  "
+                >
+                  ✓
+                </div>
+                <p style="margin-bottom: 0; color: #65676b; line-height: 1.6">
+                  Access to specialized expertise and proven solutions
+                </p>
               </li>
-              <li>
-                <div class="icon"></div>
-                <p>Partners are trained on Facebook's latest products and best practices</p>
+              <li style="display: flex; align-items: flex-start; margin-bottom: 20px">
+                <div
+                  style="
+                    width: 24px;
+                    height: 24px;
+                    background-color: #1877f2;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-right: 15px;
+                    flex-shrink: 0;
+                    color: white;
+                    font-size: 14px;
+                  "
+                >
+                  ✓
+                </div>
+                <p style="margin-bottom: 0; color: #65676b; line-height: 1.6">
+                  Partners are trained on Facebook's latest products and best practices
+                </p>
               </li>
-              <li>
-                <div class="icon"></div>
-                <p>Save time and resources with trusted marketing professionals</p>
+              <li style="display: flex; align-items: flex-start; margin-bottom: 20px">
+                <div
+                  style="
+                    width: 24px;
+                    height: 24px;
+                    background-color: #1877f2;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-right: 15px;
+                    flex-shrink: 0;
+                    color: white;
+                    font-size: 14px;
+                  "
+                >
+                  ✓
+                </div>
+                <p style="margin-bottom: 0; color: #65676b; line-height: 1.6">
+                  Save time and resources with trusted marketing professionals
+                </p>
               </li>
-              <li>
-                <div class="icon"></div>
-                <p>Scale your business with advanced tools and strategies</p>
+              <li style="display: flex; align-items: flex-start; margin-bottom: 20px">
+                <div
+                  style="
+                    width: 24px;
+                    height: 24px;
+                    background-color: #1877f2;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-right: 15px;
+                    flex-shrink: 0;
+                    color: white;
+                    font-size: 14px;
+                  "
+                >
+                  ✓
+                </div>
+                <p style="margin-bottom: 0; color: #65676b; line-height: 1.6">
+                  Scale your business with advanced tools and strategies
+                </p>
               </li>
             </ul>
-            <a href="#" class="btn">Learn More About Benefits</a>
+            <a
+              href="#"
+              style="
+                display: inline-block;
+                padding: 12px 24px;
+                background-color: #1877f2;
+                color: #ffffff;
+                text-decoration: none;
+                border-radius: 6px;
+                font-weight: 600;
+                font-size: 16px;
+                transition: background-color 0.3s;
+                margin-top: 20px;
+              "
+              >Learn More About Benefits</a
+            >
           </div>
-          <div class="benefits-image">
+          <div style="width: 48%">
             <img
               src="https://scontent.fhan5-2.fna.fbcdn.net/v/t39.2365-6/296912800_1419099301920093_9021293747789925534_n.jpg?stp=dst-webp&_nc_cat=102&ccb=1-7&_nc_sid=e280be&_nc_ohc=UTG0ntRMs1gQ7kNvgGPCcg0&_nc_oc=AdkpK6ywlTQ16r-72XkwJZTut7TO52nGWuvDxEPzeSlk6aX3r6coCVHRq1bUSU9eOas&_nc_zt=14&_nc_ht=scontent.fhan5-2.fna&_nc_gid=UBlhdVOBuOH2386m2KyTWw&oh=00_AYHEaHwMV3XbrbRZwCs3E5IDBLk59V8nmSk1AC1F9swe4g&oe=67F65616"
               alt="Benefits"
+              style="width: 100%; border-radius: 8px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1)"
             />
           </div>
         </div>
@@ -706,94 +486,141 @@
     </section>
 
     <!-- Success stories section -->
-    <section class="success-stories">
-      <div class="container">
-        <div class="section-title">
-          <h2>Success Stories</h2>
-          <p>See how businesses have achieved exceptional results with our Marketing Partners.</p>
+    <section style="padding: 80px 0; background-color: #ffffff">
+      <div style="width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px">
+        <div style="text-align: center; margin-bottom: 60px">
+          <h2 style="font-size: 32px; color: #1c1e21; margin-bottom: 15px; font-weight: 700">Success Stories</h2>
+          <p style="color: #65676b; max-width: 700px; margin: 0 auto; font-size: 18px">
+            See how businesses have achieved exceptional results with our Marketing Partners.
+          </p>
         </div>
-        <div class="stories-container">
-          <div class="story-card">
-            <div class="story-content">
-              <p>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 50px">
+          <div
+            style="
+              width: 340px;
+              padding: 30px;
+              background-color: #ffffff;
+              border-radius: 8px;
+              box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            "
+          >
+            <div style="margin-bottom: 20px">
+              <p style="color: #65676b; font-size: 16px; line-height: 1.6">
                 "Working with Facebook Marketing Partners helped us optimize our campaign performance and significantly
                 increase our return on ad spend."
               </p>
             </div>
-            <div class="story-stats">
-              <div class="stat">
-                <h4>3.2x</h4>
-                <p>ROAS increase</p>
+            <div style="display: flex; align-items: center; margin-bottom: 20px">
+              <div style="margin-right: 30px">
+                <h4 style="font-size: 24px; color: #1877f2; font-weight: 700; margin-bottom: 5px; margin-top: 0">
+                  3.2x
+                </h4>
+                <p style="color: #65676b; font-size: 14px; margin: 0">ROAS increase</p>
               </div>
-              <div class="stat">
-                <h4>45%</h4>
-                <p>More conversions</p>
+              <div style="margin-right: 30px">
+                <h4 style="font-size: 24px; color: #1877f2; font-weight: 700; margin-bottom: 5px; margin-top: 0">
+                  45%
+                </h4>
+                <p style="color: #65676b; font-size: 14px; margin: 0">More conversions</p>
               </div>
             </div>
-            <div class="story-author">
+            <div style="display: flex; align-items: center">
               <img
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGvvUfNMfsUv9Y_PWi9DmS4M1sI0q8Elv0TiNI-wJk4Hi_KGmN5EIZvCbqp7cJOYvuZk8&usqp=CAU"
                 alt="John Smith"
+                style="width: 50px; height: 50px; border-radius: 50%; margin-right: 15px"
               />
-              <div class="author-info">
-                <h4>John Smith</h4>
-                <p>Marketing Director, Global Retail</p>
+              <div>
+                <h4 style="font-size: 16px; color: #1c1e21; margin-bottom: 5px; margin-top: 0; font-weight: 600">
+                  John Smith
+                </h4>
+                <p style="color: #65676b; font-size: 14px; margin: 0">Marketing Director, Global Retail</p>
               </div>
             </div>
           </div>
-          <div class="story-card">
-            <div class="story-content">
-              <p>
+          <div
+            style="
+              width: 340px;
+              padding: 30px;
+              background-color: #ffffff;
+              border-radius: 8px;
+              box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            "
+          >
+            <div style="margin-bottom: 20px">
+              <p style="color: #65676b; font-size: 16px; line-height: 1.6">
                 "Our Facebook Marketing Partner helped us scale our e-commerce business with innovative solutions and
                 expert guidance."
               </p>
             </div>
-            <div class="story-stats">
-              <div class="stat">
-                <h4>2.7x</h4>
-                <p>Revenue growth</p>
+            <div style="display: flex; align-items: center; margin-bottom: 20px">
+              <div style="margin-right: 30px">
+                <h4 style="font-size: 24px; color: #1877f2; font-weight: 700; margin-bottom: 5px; margin-top: 0">
+                  2.7x
+                </h4>
+                <p style="color: #65676b; font-size: 14px; margin: 0">Revenue growth</p>
               </div>
-              <div class="stat">
-                <h4>62%</h4>
-                <p>New customers</p>
+              <div style="margin-right: 30px">
+                <h4 style="font-size: 24px; color: #1877f2; font-weight: 700; margin-bottom: 5px; margin-top: 0">
+                  62%
+                </h4>
+                <p style="color: #65676b; font-size: 14px; margin: 0">New customers</p>
               </div>
             </div>
-            <div class="story-author">
+            <div style="display: flex; align-items: center">
               <img
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIfjwfDEn0i-CSnR_Q3H6j0hcte9zsZR-cDDexlDjIkeo42pMC5WY2Vwm1KmKjKtdoAx0&usqp=CAU"
                 alt="Maria Rodriguez"
+                style="width: 50px; height: 50px; border-radius: 50%; margin-right: 15px"
               />
-              <div class="author-info">
-                <h4>Maria Rodriguez</h4>
-                <p>CEO, Fashion Brand</p>
+              <div>
+                <h4 style="font-size: 16px; color: #1c1e21; margin-bottom: 5px; margin-top: 0; font-weight: 600">
+                  Maria Rodriguez
+                </h4>
+                <p style="color: #65676b; font-size: 14px; margin: 0">CEO, Fashion Brand</p>
               </div>
             </div>
           </div>
-          <div class="story-card">
-            <div class="story-content">
-              <p>
+          <div
+            style="
+              width: 340px;
+              padding: 30px;
+              background-color: #ffffff;
+              border-radius: 8px;
+              box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            "
+          >
+            <div style="margin-bottom: 20px">
+              <p style="color: #65676b; font-size: 16px; line-height: 1.6">
                 "The creative solutions provided by our Facebook Marketing Partner transformed our brand messaging and
                 audience engagement."
               </p>
             </div>
-            <div class="story-stats">
-              <div class="stat">
-                <h4>187%</h4>
-                <p>Engagement increase</p>
+            <div style="display: flex; align-items: center; margin-bottom: 20px">
+              <div style="margin-right: 30px">
+                <h4 style="font-size: 24px; color: #1877f2; font-weight: 700; margin-bottom: 5px; margin-top: 0">
+                  187%
+                </h4>
+                <p style="color: #65676b; font-size: 14px; margin: 0">Engagement increase</p>
               </div>
-              <div class="stat">
-                <h4>4.5x</h4>
-                <p>Brand reach</p>
+              <div style="margin-right: 30px">
+                <h4 style="font-size: 24px; color: #1877f2; font-weight: 700; margin-bottom: 5px; margin-top: 0">
+                  4.5x
+                </h4>
+                <p style="color: #65676b; font-size: 14px; margin: 0">Brand reach</p>
               </div>
             </div>
-            <div class="story-author">
+            <div style="display: flex; align-items: center">
               <img
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaM3vnRiCMJdUygpKW8ncMUubOhPFZa9RPIb-6FMlzoE6SBmLkay1uZl1-HGUIhiXMJ5c&usqp=CAU"
                 alt="David Chen"
+                style="width: 50px; height: 50px; border-radius: 50%; margin-right: 15px"
               />
-              <div class="author-info">
-                <h4>David Chen</h4>
-                <p>Brand Manager, Tech Company</p>
+              <div>
+                <h4 style="font-size: 16px; color: #1c1e21; margin-bottom: 5px; margin-top: 0; font-weight: 600">
+                  David Chen
+                </h4>
+                <p style="color: #65676b; font-size: 14px; margin: 0">Brand Manager, Tech Company</p>
               </div>
             </div>
           </div>
@@ -802,90 +629,268 @@
     </section>
 
     <!-- How it works section -->
-    <section class="how-it-works">
-      <div class="container">
-        <div class="section-title">
-          <h2>How It Works</h2>
-          <p>Finding and working with Facebook Marketing Partners is simple.</p>
+    <section style="padding: 80px 0; background-color: #f0f2f5">
+      <div style="width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px">
+        <div style="text-align: center; margin-bottom: 60px">
+          <h2 style="font-size: 32px; color: #1c1e21; margin-bottom: 15px; font-weight: 700">How It Works</h2>
+          <p style="color: #65676b; max-width: 700px; margin: 0 auto; font-size: 18px">
+            Finding and working with Facebook Marketing Partners is simple.
+          </p>
         </div>
-        <div class="steps-container">
-          <div class="step-card">
-            <div class="step-number">1</div>
-            <h3>Find a Partner</h3>
-            <p>Search for Marketing Partners based on your business needs, industry, location, and more.</p>
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+          "
+        >
+          <div style="width: 30%; text-align: center; padding: 20px">
+            <div
+              style="
+                width: 50px;
+                height: 50px;
+                background-color: #1877f2;
+                color: #ffffff;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 20px;
+                font-weight: 700;
+                margin: 0 auto 20px;
+              "
+            >
+              1
+            </div>
+            <h3 style="font-size: 20px; color: #1c1e21; margin-bottom: 15px; font-weight: 600">Find a Partner</h3>
+            <p style="color: #65676b; font-size: 16px; line-height: 1.6">
+              Search for Marketing Partners based on your business needs, industry, location, and more.
+            </p>
           </div>
-          <div class="step-card">
-            <div class="step-number">2</div>
-            <h3>Connect & Collaborate</h3>
-            <p>Reach out to potential partners to discuss your goals and requirements.</p>
+          <div style="width: 30%; text-align: center; padding: 20px">
+            <div
+              style="
+                width: 50px;
+                height: 50px;
+                background-color: #1877f2;
+                color: #ffffff;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 20px;
+                font-weight: 700;
+                margin: 0 auto 20px;
+              "
+            >
+              2
+            </div>
+            <h3 style="font-size: 20px; color: #1c1e21; margin-bottom: 15px; font-weight: 600">
+              Connect & Collaborate
+            </h3>
+            <p style="color: #65676b; font-size: 16px; line-height: 1.6">
+              Reach out to potential partners to discuss your goals and requirements.
+            </p>
           </div>
-          <div class="step-card">
-            <div class="step-number">3</div>
-            <h3>Grow Your Business</h3>
-            <p>Work together to implement solutions and achieve your marketing objectives.</p>
+          <div style="width: 30%; text-align: center; padding: 20px">
+            <div
+              style="
+                width: 50px;
+                height: 50px;
+                background-color: #1877f2;
+                color: #ffffff;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 20px;
+                font-weight: 700;
+                margin: 0 auto 20px;
+              "
+            >
+              3
+            </div>
+            <h3 style="font-size: 20px; color: #1c1e21; margin-bottom: 15px; font-weight: 600">Grow Your Business</h3>
+            <p style="color: #65676b; font-size: 16px; line-height: 1.6">
+              Work together to implement solutions and achieve your marketing objectives.
+            </p>
           </div>
         </div>
       </div>
     </section>
-
     <!-- CTA section -->
-    <section class="cta">
-      <div class="container">
-        <h2>Ready to take your business to the next level?</h2>
-        <p>
+    <section style="padding: 80px 0; background-color: #ffffff; text-align: center">
+      <div style="width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px">
+        <h2 style="font-size: 32px; color: #1c1e21; margin-bottom: 20px; font-weight: 700">
+          Ready to take your business to the next level?
+        </h2>
+        <p style="color: #65676b; max-width: 700px; margin: 0 auto 30px; font-size: 18px; line-height: 1.6">
           Connect with Facebook Marketing Partners today and discover how they can help you achieve your business goals.
         </p>
-        <a href="#" class="btn">Find a Partner Now</a>
+        <a
+          href="#"
+          style="
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #1877f2;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: background-color 0.3s;
+          "
+          >Find a Partner Now</a
+        >
       </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-column">
-            <h3>Facebook Marketing Partners</h3>
-            <ul>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Find Partners</a></li>
-              <li><a href="#">Become a Partner</a></li>
-              <li><a href="#">Success Stories</a></li>
-              <li><a href="#">Resources</a></li>
+    <footer style="background-color: #f0f2f5; padding: 60px 0 30px">
+      <div style="width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px">
+        <div style="display: flex; justify-content: space-between; flex-wrap: wrap">
+          <div style="width: 23%; margin-bottom: 30px">
+            <h3 style="font-size: 16px; color: #1c1e21; margin-bottom: 20px; font-weight: 600">
+              Facebook Marketing Partners
+            </h3>
+            <ul style="list-style: none; margin: 0; padding: 0">
+              <li style="margin-bottom: 10px">
+                <a href="#" style="color: #65676b; text-decoration: none; font-size: 14px; transition: color 0.3s"
+                  >About</a
+                >
+              </li>
+              <li style="margin-bottom: 10px">
+                <a href="#" style="color: #65676b; text-decoration: none; font-size: 14px; transition: color 0.3s"
+                  >Find Partners</a
+                >
+              </li>
+              <li style="margin-bottom: 10px">
+                <a href="#" style="color: #65676b; text-decoration: none; font-size: 14px; transition: color 0.3s"
+                  >Become a Partner</a
+                >
+              </li>
+              <li style="margin-bottom: 10px">
+                <a href="#" style="color: #65676b; text-decoration: none; font-size: 14px; transition: color 0.3s"
+                  >Success Stories</a
+                >
+              </li>
+              <li style="margin-bottom: 10px">
+                <a href="#" style="color: #65676b; text-decoration: none; font-size: 14px; transition: color 0.3s"
+                  >Resources</a
+                >
+              </li>
             </ul>
           </div>
-          <div class="footer-column">
-            <h3>Partner Categories</h3>
-            <ul>
-              <li><a href="#">Ad Technology</a></li>
-              <li><a href="#">Community Management</a></li>
-              <li><a href="#">Creative Platforms</a></li>
-              <li><a href="#">Measurement</a></li>
-              <li><a href="#">Small Business Solutions</a></li>
-              <li><a href="#">Commerce</a></li>
+          <div style="width: 23%; margin-bottom: 30px">
+            <h3 style="font-size: 16px; color: #1c1e21; margin-bottom: 20px; font-weight: 600">Partner Categories</h3>
+            <ul style="list-style: none; margin: 0; padding: 0">
+              <li style="margin-bottom: 10px">
+                <a href="#" style="color: #65676b; text-decoration: none; font-size: 14px; transition: color 0.3s"
+                  >Ad Technology</a
+                >
+              </li>
+              <li style="margin-bottom: 10px">
+                <a href="#" style="color: #65676b; text-decoration: none; font-size: 14px; transition: color 0.3s"
+                  >Community Management</a
+                >
+              </li>
+              <li style="margin-bottom: 10px">
+                <a href="#" style="color: #65676b; text-decoration: none; font-size: 14px; transition: color 0.3s"
+                  >Creative Platforms</a
+                >
+              </li>
+              <li style="margin-bottom: 10px">
+                <a href="#" style="color: #65676b; text-decoration: none; font-size: 14px; transition: color 0.3s"
+                  >Measurement</a
+                >
+              </li>
+              <li style="margin-bottom: 10px">
+                <a href="#" style="color: #65676b; text-decoration: none; font-size: 14px; transition: color 0.3s"
+                  >Small Business Solutions</a
+                >
+              </li>
+              <li style="margin-bottom: 10px">
+                <a href="#" style="color: #65676b; text-decoration: none; font-size: 14px; transition: color 0.3s"
+                  >Commerce</a
+                >
+              </li>
             </ul>
           </div>
-          <div class="footer-column">
-            <h3>Support</h3>
-            <ul>
-              <li><a href="#">Help Center</a></li>
-              <li><a href="#">Contact Us</a></li>
-              <li><a href="#">Partner Support</a></li>
-              <li><a href="#">Business Support</a></li>
-              <li><a href="#">FAQs</a></li>
+          <div style="width: 23%; margin-bottom: 30px">
+            <h3 style="font-size: 16px; color: #1c1e21; margin-bottom: 20px; font-weight: 600">Support</h3>
+            <ul style="list-style: none; margin: 0; padding: 0">
+              <li style="margin-bottom: 10px">
+                <a href="#" style="color: #65676b; text-decoration: none; font-size: 14px; transition: color 0.3s"
+                  >Help Center</a
+                >
+              </li>
+              <li style="margin-bottom: 10px">
+                <a href="#" style="color: #65676b; text-decoration: none; font-size: 14px; transition: color 0.3s"
+                  >Contact Us</a
+                >
+              </li>
+              <li style="margin-bottom: 10px">
+                <a href="#" style="color: #65676b; text-decoration: none; font-size: 14px; transition: color 0.3s"
+                  >Partner Support</a
+                >
+              </li>
+              <li style="margin-bottom: 10px">
+                <a href="#" style="color: #65676b; text-decoration: none; font-size: 14px; transition: color 0.3s"
+                  >Business Support</a
+                >
+              </li>
+              <li style="margin-bottom: 10px">
+                <a href="#" style="color: #65676b; text-decoration: none; font-size: 14px; transition: color 0.3s"
+                  >FAQs</a
+                >
+              </li>
             </ul>
           </div>
-          <div class="footer-column">
-            <h3>Legal</h3>
-            <ul>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Terms of Service</a></li>
-              <li><a href="#">Cookie Policy</a></li>
-              <li><a href="#">Data Policy</a></li>
-              <li><a href="#">Partner Program Terms</a></li>
+          <div style="width: 23%; margin-bottom: 30px">
+            <h3 style="font-size: 16px; color: #1c1e21; margin-bottom: 20px; font-weight: 600">Legal</h3>
+            <ul style="list-style: none; margin: 0; padding: 0">
+              <li style="margin-bottom: 10px">
+                <a href="#" style="color: #65676b; text-decoration: none; font-size: 14px; transition: color 0.3s"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li style="margin-bottom: 10px">
+                <a href="#" style="color: #65676b; text-decoration: none; font-size: 14px; transition: color 0.3s"
+                  >Terms of Service</a
+                >
+              </li>
+              <li style="margin-bottom: 10px">
+                <a href="#" style="color: #65676b; text-decoration: none; font-size: 14px; transition: color 0.3s"
+                  >Cookie Policy</a
+                >
+              </li>
+              <li style="margin-bottom: 10px">
+                <a href="#" style="color: #65676b; text-decoration: none; font-size: 14px; transition: color 0.3s"
+                  >Data Policy</a
+                >
+              </li>
+              <li style="margin-bottom: 10px">
+                <a href="#" style="color: #65676b; text-decoration: none; font-size: 14px; transition: color 0.3s"
+                  >Partner Program Terms</a
+                >
+              </li>
             </ul>
-            <div class="language-selector">
-              <span>Language:</span>
-              <select>
+            <div style="margin-top: 20px; display: flex; align-items: center">
+              <span style="color: #65676b; font-size: 14px">Language:</span>
+              <select
+                style="
+                  padding: 8px 12px;
+                  border-radius: 4px;
+                  border: 1px solid #dadde1;
+                  background-color: #ffffff;
+                  color: #1c1e21;
+                  font-size: 14px;
+                  margin-left: 10px;
+                "
+              >
                 <option value="en">English</option>
                 <option value="es">Español</option>
                 <option value="fr">Français</option>
@@ -896,8 +901,8 @@
             </div>
           </div>
         </div>
-        <div class="footer-bottom">
-          <p>© 2025 Meta. All rights reserved.</p>
+        <div style="margin-top: 40px; text-align: center; padding-top: 20px; border-top: 1px solid #dadde1">
+          <p style="color: #65676b; font-size: 12px; margin: 0">© 2025 Meta. All rights reserved.</p>
         </div>
       </div>
     </footer>
